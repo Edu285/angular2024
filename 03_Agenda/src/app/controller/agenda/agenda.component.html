@@ -1,0 +1,15 @@
+<div>
+  NOMBRE:<input type="text" [(ngModel)]="nombre"><br><br>
+  EDAD:<input type="number" [(ngModel)]="edad"><br><br>
+  TELEFONO:<input type="text" [(ngModel)]="telefono"><br><br>
+
+  <input type="button" value="GUARDAR" (click)="guardar()"><br><br>
+
+  <table border="5" *ngIf="agenda.length>0">
+    <tr><th>Nombre</th><th align="center">Edad</th><th>Telefono</th></tr>
+    <tr *ngFor="let c of agenda">
+        <td>{{c.nombre}}</td><td align="center">{{c.edad}}</td><td>{{c.telefono}}</td>
+    </tr>
+  </table>
+
+</div>
